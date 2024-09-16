@@ -187,7 +187,7 @@ body {
     position: relative;
     border-radius: 15px;
     overflow:hidden;
-    
+   
 
 }
 .mob img{
@@ -216,12 +216,14 @@ body {
     justify-content: center;
     color:black;
     transition: 1s;
+
     
     
 }
+
 .text{
     position:absolute;
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, #554daf,  #7c9d81,#0f3546);
     border-radius: 15px;
     bottom:0px;
     height: 7vw;

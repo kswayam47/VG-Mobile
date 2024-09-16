@@ -59,7 +59,7 @@
                 <img src="<%= user.image %>" alt="mobile image">
                 <div class="texts">
                     <h3 class="names"><%= user.name %></h3>
-                    <p class="price">Rs.<%= user.price %></p>
+                    <b><p class="price">Rs.<%= user.price %></p></b>
                     <form action="/add-to-cart/<%= user._id %>" method="POST">
                         <button type="submit" class="add-to-cart-button">Add to Cart</button>
                     </form>
