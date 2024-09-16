@@ -45,7 +45,7 @@ const boySchema = new mongoose.Schema({
         {
             productId: {
                 type: mongoose.Schema.Types.ObjectId,
-                ref: 'user' // Reference to your product model
+                ref: 'user'
             },
             quantity: { type: Number, default: 1 }
         }

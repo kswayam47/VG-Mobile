@@ -85,7 +85,7 @@ app.post('/login', async (req, res) => {
     let boy = await boymodel.findOne({ email: email });
     
     if (!boy) {
-        // Re-render the login page with an error message
+        
         return res.render('login', { error: "User not found", user: null });
     }
 
@@ -95,7 +95,7 @@ app.post('/login', async (req, res) => {
             res.cookie("token", token);
             res.redirect("/");
         } else {
-            // Incorrect password - re-render login page with error
+          
             res.render('login', { error: "Incorrect password", user: null });
         }
     });
@@ -177,11 +177,11 @@ app.post('/add-to-cart/:id', async (req, res) => {
     }
 
     await user.save();
-    res.redirect('/mobile'); // Redirect back to mobile products page after adding
+    res.redirect('/mobile'); 
 });
 app.get('/cart', async (req, res) => {
     if (!req.user) {
-        return res.redirect('/login'); // Redirect to login if not logged in
+        return res.redirect('/login'); 
     }
 
     const user = await boymodel.findOne({ email: req.user.email }).populate('cart.productId');

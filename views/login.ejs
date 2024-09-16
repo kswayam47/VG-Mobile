@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VG Mobile - Login</title>
     <style>
-        /* Darker gradient background */
+        
         body {
             margin: 0;
             padding: 0;
@@ -18,15 +18,15 @@
             color: white;
         }
 
-        /* Centered form container with increased width */
+   
         .login-container {
-            background: rgba(0, 0, 0, 0.5); /* Darker background */
+            background: rgba(0, 0, 0, 0.5); 
             backdrop-filter: blur(10px);
             border-radius: 25px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
             padding: 50px;
             text-align: center;
-            width: 500px; /* Increased width */
+            width: 500px; 
             transition: transform 0.3s ease-in-out;
         }
 
@@ -34,7 +34,7 @@
             transform: scale(1.05);
         }
 
-        /* Header with logo and text */
+     
         .login-container h1 {
             font-size: 2.5rem;
             margin-bottom: 15px;
@@ -47,7 +47,7 @@
             font-weight: 500;
         }
 
-        /* Input styles */
+   
         .login-container input[type="email"],
         .login-container input[type="password"] {
             width: 90%;
@@ -67,13 +67,13 @@
             outline: none;
         }
 
-        /* Darker login button styles */
+        
         .login-container button[type="submit"] {
             width: 90%;
             padding: 15px;
             border: none;
             border-radius: 10px;
-            background-color: #1b5e20; /* Darker green */
+            background-color: #1b5e20; 
             font-size: 1.3rem;
             font-weight: bold;
             color: white;
@@ -83,17 +83,17 @@
         }
 
         .login-container button[type="submit"]:hover {
-            background-color: #388e3c; /* Darker hover green */
+            background-color: #388e3c; 
             transform: translateY(-3px);
         }
 
-        /* Darker signup button styles */
+      
         .login-container button[type="button"] {
             width: 90%;
             padding: 15px;
             border: none;
             border-radius: 10px;
-            background-color: #0d47a1; /* Darker blue */
+            background-color: #0d47a1;
             font-size: 1.3rem;
             font-weight: bold;
             color: white;
@@ -103,16 +103,15 @@
         }
 
         .login-container button[type="button"]:hover {
-            background-color: #1565c0; /* Darker hover blue */
+            background-color: #1565c0; 
             transform: translateY(-3px);
         }
 
-        /* Add some spacing for form elements */
+     
         .form-group {
             margin-bottom: 25px;
         }
 
-        /* Smaller screens */
         @media (max-width: 768px) {
             .login-container {
                 width: 90%;
@@ -126,7 +125,7 @@
         <h1>VG Mobile</h1>
         <p>Login to your account</p>
     
-        <!-- Show error message if exists -->
+  
         <% if (typeof error !== 'undefined') { %>
             <p style="color: red;"><%= error %></p>
         <% } %>

@@ -37,7 +37,7 @@
 
                 
             <% } else { %>
-                <!-- Show login button if not logged in -->
+               
                 <a class="navcomponents" href="/login">User Login</a>
             <% } %>
     
@@ -75,11 +75,11 @@
             buttons.forEach(button => {
                 button.addEventListener('click', function(event) {
                     if (!isLoggedIn) {
-                        // User not logged in, redirect to login page
+                    
                         window.location.href = "/login";
-                        event.preventDefault(); // Prevent the form from being submitted
+                        event.preventDefault(); 
                     } else {
-                        // User is logged in, allow adding to cart
+                      
                         alert('Product added to cart!');
                     }
                 });

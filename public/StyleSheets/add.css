@@ -1,11 +1,11 @@
-/* General Body Style */
+
 body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     color: #333;
 }
 
-/* Form Container Style */
+
 .form-container {
     width: 90%;
     max-width: 600px;
@@ -17,20 +17,20 @@ body {
     text-align: center;
 }
 
-/* Heading Style */
+
 .form-container h1 {
     margin-bottom: 20px;
     color: #007bff;
     font-size: 2em;
 }
 
-/* Form Group Style */
+
 .form-group {
     margin-bottom: 20px;
     text-align: left;
 }
 
-/* Label Style */
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
@@ -38,9 +38,9 @@ body {
     color: #555;
 }
 
-/* Input Field Style */
+
 .form-group input {
-    width: calc(100% - 22px); /* Adjust width to fit within container */
+    width: calc(100% - 22px); 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -48,14 +48,13 @@ body {
     box-sizing: border-box;
 }
 
-/* Input Field Focus Style */
+
 .form-group input:focus {
     border-color: #007bff;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Button Style */
 button, .button-link {
     display: inline-block;
     background-color: #007bff;
@@ -70,13 +69,12 @@ button, .button-link {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Button Hover Style */
+
 button:hover, .button-link:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
 
-/* Button Active Style */
 button:active, .button-link:active {
     background-color: #003d7a;
     transform: scale(1.02);
