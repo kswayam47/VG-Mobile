@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="/StyleSheets/style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <img class='log' src="/Images/log3.png" alt="VG Mobile">
+            <a class="navcomponents" href="/">Home</a>
+            <a class="navcomponents" href="/mobile">Mobiles</a>
+            <a class="navcomponents" href="/tablets">Tablets</a>
+            <a class="navcomponents" href="/accessories">Accessories</a>
+            <a class="navcomponents" href="/aboutus">About us</a>
+            <form class="search-form" action="/search" method="GET">
+                <input type="text" placeholder="Search Product" name="query" class="search-input">
+            </form>
+            <% if (user) { %>   
+                <div class="user-info">
+                    <img src="/Images/user.png" alt="User Icon">
+                    <a class="navcomponents" href="/logout">Logout</a>
+                    <div class="dropdown">
+                        <p>Username: <%= user.username %></p>
+                        <p>Email: <%= user.email %></p>
+                        <p>Mobile: <%= user.mobile %></p>
+                     
+                    </div>
+    
+                </div>           
+
+                
+    
+                
+            <% } else { %>
+                <!-- Show login button if not logged in -->
+                <a class="navcomponents" href="/login">User Login</a>
+            <% } %>
+    
+    
+        </div>
+    </nav>
+    <h1 class="carth">Your Cart</h1>
+    <div class="cart">
+
+        <% cartItems.forEach(item => { %>
+            <div class="cart-item">
+                <img src="<%= item.productId.image %>" alt="Product Image">
+                <div class="item-details">
+                    <h3><%= item.productId.name %></h3>
+                    <p>Price: Rs.<%= item.productId.price %></p>
+                    <p>Quantity: <%= item.quantity %></p>
+                    <p>Total: Rs.<%= item.productId.price * item.quantity %></p>
+                </div>
+            </div>
+        <% }) %>
+        <div class="cart-footer">
+            <h3>Total Price: Rs.<%= totalPrice %></h3>
+            <form action="/thankyou" method="get">
+                <button type="submit" class="proceed-to-buy-button">Proceed to Buy</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

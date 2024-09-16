@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/StyleSheets/style.css">
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+        <img class='log' src="/Images/log3.png" alt="VG Mobile">
+        <a class="navcomponents" href="/">Home</a>
+        <a class="navcomponents" href="/mobile">Mobiles</a>
+        <a class="navcomponents" href="/tablets">Tablets</a>
+        <a class="navcomponents" href="/accessories">Accessories</a>
+        <a class="navcomponents" href="/aboutus">About us</a>
+        <form class="search-form" action="/search" method="GET">
+            <input type="text" placeholder="Search Product" name="query" class="search-input">
+        </form>
+        <% if (user) { %>   
+            <div class="user-info">
+                <img src="/Images/user.png" alt="User Icon">
+                <a class="navcomponents" href="/logout">Logout</a>
+                <div class="dropdown">
+                    <p>Username: <%= user.username %></p>
+                    <p>Email: <%= user.email %></p>
+                    <p>Mobile: <%= user.mobile %></p>
+                 
+                </div>
+
+            </div>           
+            <a class="carters" href="/cart">
+                <img src="/Images/cart.png" alt="cart">
+            </a>
+            
+
+            
+        <% } else { %>
+            <!-- Show login button if not logged in -->
+            <a class="navcomponents" href="/login">User Login</a>
+        <% } %>
+
+
+    </div>
+</nav>
+
+
+
+    <div class="headers">
+        <h1>The Leaders</h1>
+
+    </div>
+
+    <div class="banda">
+        <div class="banda2img">
+       <img src="/Images/bnda6.jpg" alt="banda"></div>
+       <div class="bandainfo">
+       <h1>Mr. Mukesh Kewlani</h1>
+       <h2>Founder-VG Mobile</h2></div>
+      <div class="bandades">
+         <p>Mukesh Kewlani, the founder of Vaishnavi Mobile, started his journey in the mobile retail business back in 2000 in Pusad. With a vision to provide quality mobile products and exceptional service, he built the shop from the ground up, turning it into a trusted name in the local community. Over the years, Mukesh's dedication and hard work have been the backbone of the business, as he navigated the ever-changing technology market while maintaining a strong focus on customer satisfaction.</p>
+    </div></div>
+    
+    <div class="banda2">
+        <div class="bandaimg">
+       <img src="/Images/bnda5.jpg" alt="banda"></div>
+       <div class="bandainfo">
+       <h1>Mr. Swayam Kewlani</h1>
+       <h2>Director - VG Mobile</h2></div>
+       <div class="bandadest">
+        <p>Swayam Kewlani, a second-year IT student at PICT, Pune, began his journey in business at a young age by helping his father at their family shop, Vaishnavi Mobile. Through this hands-on experience, he learned the essentials of customer service, inventory management, and the mobile industry. Combining these lessons with his passion for technology, Swayam is now focused on leveraging both his business knowledge and IT skills to make a meaningful impact in the future..</p>
+   </div>
+    </div>
+ 
+    <div class="footer">
+        <div class="inner-footer">
+      
+      
+          <div class="footer-items">
+            <h1>VG Mobile</h1>
+            
+          </div>
+      
+      
+          <div class="footer-items">
+            <h3>Quick Links</h3>
+            <div class="border1"></div> 
+              <ul>
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>Search</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="#"><li>About</li></a>
+              </ul>
+          </div>
+      
+      
+          <div class="footer-items">
+            <h3>Categories</h3>
+            <div class="border1"></div>  
+              <ul>
+                <a href="#"><li>Mobile</li></a>
+                <a href="#"><li>TV</li></a>
+                <a href="#"><li>Accesories</li></a>
+                <a href="#"><li>Tablets</li></a>
+              </ul>
+          </div>
+      
+      
+          <div class="footer-items">
+            <h3>Contact us</h3>
+            <div class="border1"></div>
+              <ul>
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>Swayam Kewlani</li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i>123456789</li>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i>swayamkewlani118@gmail.com</li>
+              </ul> 
+            
+      
+              <div class="social-media">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-google-plus-square"></i></a>
+              </div> 
+          </div>
+        </div>
+        
+      
+        <div class="footer-bottom">
+          Copyright &copy; VG Mobile 2024.
+        </div>
+      </div>
+        
+    
+        
+</body>
+</html>

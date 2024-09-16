@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Address</title>
+    <link rel="stylesheet" href="/StyleSheets/form.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Shipping Address</h1>
+    <form id="addressForm">
+        <!-- Personal Info -->
+        <label for="name">Full Name <span>*</span></label>
+        <input type="text" id="name" name="name" placeholder="Your Good Name" required>
+
+        <label for="phone">Phone Number <span>*</span></label>
+        <input type="text" id="phone" name="phone" placeholder="1234567890" required>
+
+        <!-- Address Info -->
+        <label for="addressLine1">Address Line 1 <span>*</span></label>
+        <input type="text" id="addressLine1" name="addressLine1" placeholder="Street Address" required>
+
+        <label for="addressLine2">Address Line 2</label>
+        <input type="text" id="addressLine2" name="addressLine2" placeholder="Apartment, , Building (optional)">
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="City" required>
+
+        <label for="state">State/Province/Region <span>*</span></label>
+        <input type="text" id="state" name="state" placeholder="State" required>
+
+        <label for="zip">ZIP/Postal Code</label>
+        <input type="text" id="zip" name="zip" placeholder="123456">
+
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" placeholder="Country">
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <h2>Order Placed!</h2>
+        <p>Your order will be delivered soon.<br>Thank you for shopping with us!</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('addressForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('successMessage').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>

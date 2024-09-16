@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VG Mobile</title>
+    <link rel="stylesheet" href="/StyleSheets/style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <img class='log' src="/Images/log3.png" alt="VG Mobile">
+            <a class="navcomponents" href="/">Home</a>
+            <a class="navcomponents" href="/mobile">Mobiles</a>
+            <a class="navcomponents" href="/tablets">Tablets</a>
+            <a class="navcomponents" href="/accessories">Accessories</a>
+            <a class="navcomponents" href="/aboutus">About us</a>
+            <form class="search-form" action="/search" method="GET">
+                <input type="text" placeholder="Search Product" name="query" class="search-input">
+            </form>
+            <% if (user) { %>   
+                <div class="user-info">
+                    <img src="/Images/user.png" alt="User Icon">
+                    <a class="navcomponents" href="/logout">Logout</a>
+                    <div class="dropdown">
+                        <p>Username: <%= user.username %></p>
+                        <p>Email: <%= user.email %></p>
+                        <p>Mobile: <%= user.mobile %></p>
+                     
+                    </div>
+
+                </div>           
+                <a class="carters" href="/cart">
+                    <img src="/Images/cart.png" alt="cart">
+                </a>
+                
+
+                
+            <% } else { %>
+                <!-- Show login button if not logged in -->
+                <a class="navcomponents" href="/login">User Login</a>
+            <% } %>
+    
+
+        </div>
+    </nav>
+    
+
+<div class="slideshow">
+    <div class="slide">
+        <img src="/Images/slide1.png" alt="Slide 1">
+    </div>
+    <div class="slide">
+        <img src="/Images/slide2.png" alt="Slide 2">
+    </div>
+    <div class="slide">
+        <img src="/Images/slide3.png" alt="Slide 3">
+    </div>
+    <div class="slide">
+        <img src="/Images/slide4.png" alt="Slide 4">
+    </div>
+</div>
+
+<div class="logos">
+    <img class="logo" src="/Images/iphone.jpg" alt="iphone">
+    <img class="logo" src="/Images/oneplus.png" alt="oneplus">
+    <img class="logo" src="/Images/boat.png" alt="boat">
+    <img class="logo" src="/Images/samsung.png" alt="samsung">
+    <img class="logo" src="/Images/MI.png" alt="MI">
+    <img class="logo" src="/Images/oppo.jpeg" alt="Oppo">
+</div>
+
+<div class="Categories">
+    <h1 class="category">Top Categories</h1>
+    <a href="/mobile" class="category-box">
+        <div class="mob">
+            <img src="/Images/mobile.png" alt="mobile">
+            <div class="text">
+                <h1>Mobiles</h1>
+            </div>
+        </div>
+    </a>
+    <a href="/tablets" class="category-box">
+        <div class="mob">
+            <img src="/Images/tabs.png" alt="tabs">
+            <div class="text">
+                <h1>Tabs</h1>
+            </div>
+        </div>
+    </a>
+    <a href="/accessories" class="category-box">
+        <div class="mob">
+            <img src="/Images/accessories.png" alt="accessories">
+            <div class="text">
+                <h1>Accessories</h1>
+            </div>
+        </div>
+    </a>
+    <a href="tv" class="category-box">
+        <div class="mob">
+            <img src="/Images/tv.png" alt="smart tv">
+            <div class="text">
+                <h1>Smart TV</h1>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="feedimg">
+    <img src="/Images/feed.png" alt="feed"></img>
+
+</div>
+<div class="feedtitle">
+    <h1>What People are Saying about Us?</h1>
+   </div>
+ <div class="feedback">
+
+     <div class="feed1">
+        <img src="/Images/bnda1.jpg"></img>
+    <b><p>Best customer experience while shopping at VG Mobile. Received Realme 11 Pro 5G on time. Will definitely reconsider while shopping Smartphone.</p>
+    </b><h1>Shradha Sharma</h1>
+    <h2>Pune</h2>
+     </div>
+     <div class="feed2">
+        <img src="/Images/bnda2.jpeg"></img>
+        <b><p>Great customer experience while shopping at VG Mobile. Great Experience Buying iphone 15 Pro max on Global launch Day</p>
+        </b><h1>Shubham Dubey</h1>
+        <h2>Nagpur</h2>
+     </div>
+     <div class="feed3">
+        <img src="/Images/bnda3.jpeg"></img>
+        <b><p>I had an excellent experience shopping at VG Mobile. The team is very knowledgeable and helped me find the perfect phone that fits both my budget and needs. The variety of brands and models available is impressive, and the customer service was top-notch.</p>
+        </b><h1>Priyanka Verma</h1>
+        <h2>Mumbai</h2>
+     </div>
+
+
+
+ </div>
+ <div class="hour"><div class="houri">
+      <div class="houra">
+   <h1>Free Shipping</h1>
+   <h3>Free Shipping World Wide</h3>
+
+      </div>
+      <div class="hourb">
+        <h1>Return Exchange</h1>
+        <h3>30 Days Moneyback Guarantee</h3>
+     
+      </div>
+      <div class="hourc">
+        <h1>24/7 Services</h1>
+        <h3>Online Service For New Customer</h3>
+         
+      </div>
+ </div></div>
+
+
+<div class="footer">
+    <div class="inner-footer">
+  
+  
+      <div class="footer-items">
+        <h1>VG Mobile</h1>
+        
+      </div>
+  
+  
+      <div class="footer-items">
+        <h3>Quick Links</h3>
+        <div class="border1"></div> 
+          <ul>
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Search</li></a>
+            <a href="#"><li>Contact</li></a>
+            <a href="#"><li>About</li></a>
+          </ul>
+      </div>
+  
+  
+      <div class="footer-items">
+        <h3>Categories</h3>
+        <div class="border1"></div>  
+          <ul>
+            <a href="#"><li>Mobile</li></a>
+            <a href="#"><li>TV</li></a>
+            <a href="#"><li>Accesories</li></a>
+            <a href="#"><li>Tablets</li></a>
+          </ul>
+      </div>
+  
+  
+      <div class="footer-items">
+        <h3>Contact us</h3>
+        <div class="border1"></div>
+          <ul>
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i>Swayam Kewlani</li>
+            <li><i class="fa fa-phone" aria-hidden="true"></i>123456789</li>
+            <li><i class="fa fa-envelope" aria-hidden="true"></i>swayamkewlani118@gmail.com</li>
+          </ul> 
+        
+  
+          <div class="social-media">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-google-plus-square"></i></a>
+          </div> 
+      </div>
+    </div>
+    
+  
+    <div class="footer-bottom">
+      Copyright &copy; VG Mobile 2024.
+    </div>
+  </div>
+    
+
+    
+</body>
+</html>

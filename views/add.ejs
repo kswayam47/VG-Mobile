@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+    <link rel="stylesheet" href="/StyleSheets/add.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .form-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button-link:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .form-links {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-links a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .form-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Show the form that corresponds to the anchor in the URL */
+        #mobile-form:target,
+        #tablet-form:target,
+        #tv-form:target,
+        #accessories-form:target {
+            display: block;
+        }
+
+        /* By default, hide all forms */
+        #mobile-form,
+        #tablet-form,
+        #tv-form,
+        #accessories-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Select Item Type</h1>
+        <div class="form-links">
+            <a href="#mobile-form">Mobile</a>
+            <a href="#tablet-form">Tablet</a>
+            <a href="#tv-form">TV</a>
+            <a href="#accessories-form">Accessories</a>
+        </div>
+
+        <!-- Mobile Form -->
+        <div id="mobile-form">
+            <h1>Add Mobile Details</h1>
+            <form action="/createmobile" method="post">
+                <div class="form-group">
+                    <label for="name">Mobile Name:</label>
+                    <input type="text" id="mobile-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile-image">Image URL:</label>
+                    <input type="url" id="mobile-image" name="image" placeholder="https://example.com/image.jpg" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile-price">Price:</label>
+                    <input type="number" id="mobile-price" name="price" min="0" required>
+                </div>
+                <button type="submit" class="button-link">Create Mobile</button>
+            </form>
+        </div>
+
+        <!-- Tablet Form -->
+        <div id="tablet-form">
+            <h1>Add Tablet Details</h1>
+            <form action="/createtablet" method="post">
+                <div class="form-group">
+                    <label for="name">Tablet Name:</label>
+                    <input type="text" id="tablet-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="tablet-image">Image URL:</label>
+                    <input type="url" id="tablet-image" name="image" placeholder="https://example.com/image.jpg" required>
+                </div>
+                <div class="form-group">
+                    <label for="tablet-price">Price:</label>
+                    <input type="number" id="tablet-price" name="price" min="0" required>
+                </div>
+                <button type="submit" class="button-link">Create Tablet</button>
+            </form>
+        </div>
+
+        <!-- TV Form -->
+        <div id="tv-form">
+            <h1>Add TV Details</h1>
+            <form action="/createtv" method="post">
+                <div class="form-group">
+                    <label for="tv-name">TV Name:</label>
+                    <input type="text" id="tv-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="tv-image">Image URL:</label>
+                    <input type="url" id="tv-image" name="image" placeholder="https://example.com/image.jpg" required>
+                </div>
+                <div class="form-group">
+                    <label for="tv-price">Price:</label>
+                    <input type="number" id="tv-price" name="price" min="0" required>
+                </div>
+                <button type="submit" class="button-link">Create TV</button>
+            </form>
+        </div>
+
+        <!-- Accessories Form -->
+        <div id="accessories-form">
+            <h1>Add Accessories Details</h1>
+            <form action="/createaccessories" method="post">
+                <div class="form-group">
+                    <label for="accessories-name">Accessories Name:</label>
+                    <input type="text" id="accessories-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="accessories-image">Image URL:</label>
+                    <input type="url" id="accessories-image" name="image" placeholder="https://example.com/image.jpg" required>
+                </div>
+                <div class="form-group">
+                    <label for="accessories-price">Price:</label>
+                    <input type="number" id="accessories-price" name="price" min="0" required>
+                </div>
+                <button type="submit" class="button-link">Create Accessories</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

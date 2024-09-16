@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/StyleSheets/style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <img src="/Images/logo.jpg" alt="SS Mobile">
+            <a class="navcomponents" href="/">Home</a>
+            <a class="navcomponents" href="/mobile">Mobiles</a>
+            <a class="navcomponents" href="/tablets">Tablets</a>
+            <a class="navcomponents" href="/accessories">Accessories</a>
+            <a class="navcomponents" href="/aboutus">About us</a>
+            <form class="search-form" action="/search" method="GET">
+                <input type="text" placeholder="Search Product" name="query" class="search-input">
+            </form>
+            <% if (user) { %>              
+                
+                
+                <div class="user-info">
+                    <img src="/Images/user.png" alt="User Icon">
+                    <a class="navcomponents" href="/logout">Logout</a>
+                    <div class="dropdown">
+                        <p>Username: <%= user.username %></p>
+                        <p>Email: <%= user.email %></p>
+                        <p>Mobile: <%= user.mobile %></p>
+                     
+                    </div>
+                </div>
+                
+            <% } else { %>
+                <!-- Show login button if not logged in -->
+                <a class="navcomponents" href="/login">User Login</a>
+            <% } %>
+    
+
+        </div>
+    </nav>
+     
+<div class="footer">
+    <div class="inner-footer">
+  
+  
+      <div class="footer-items">
+        <h1>SS Mobile</h1>
+        
+      </div>
+  
+  
+      <div class="footer-items">
+        <h3>Quick Links</h3>
+        <div class="border1"></div> 
+          <ul>
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Search</li></a>
+            <a href="#"><li>Contact</li></a>
+            <a href="#"><li>About</li></a>
+          </ul>
+      </div>
+  
+  
+      <div class="footer-items">
+        <h3>Categories</h3>
+        <div class="border1"></div>  
+          <ul>
+            <a href="#"><li>Mobile</li></a>
+            <a href="#"><li>TV</li></a>
+            <a href="#"><li>Accesories</li></a>
+            <a href="#"><li>Tablets</li></a>
+          </ul>
+      </div>
+  
+  
+      <div class="footer-items">
+        <h3>Contact us</h3>
+        <div class="border1"></div>
+          <ul>
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i>Swayam Kewlani</li>
+            <li><i class="fa fa-phone" aria-hidden="true"></i>123456789</li>
+            <li><i class="fa fa-envelope" aria-hidden="true"></i>swayamkewlani118@gmail.com</li>
+          </ul> 
+        
+  
+          <div class="social-media">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-google-plus-square"></i></a>
+          </div> 
+      </div>
+    </div>
+    
+  
+    <div class="footer-bottom">
+      Copyright &copy; SS Mobile 2024.
+    </div>
+  </div>
+    
+
+    
+</body>
+</html>

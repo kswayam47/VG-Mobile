@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VG Mobile - Login</title>
+    <style>
+        /* Darker gradient background */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Centered form container with increased width */
+        .login-container {
+            background: rgba(0, 0, 0, 0.5); /* Darker background */
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            text-align: center;
+            width: 500px; /* Increased width */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .login-container:hover {
+            transform: scale(1.05);
+        }
+
+        /* Header with logo and text */
+        .login-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .login-container p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            font-weight: 500;
+        }
+
+        /* Input styles */
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            width: 90%;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: none;
+            font-size: 1.1rem;
+            background-color: rgba(255, 255, 255, 0.85);
+            color: #333;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .login-container input[type="email"]:focus,
+        .login-container input[type="password"]:focus {
+            background-color: rgba(255, 255, 255, 1);
+            outline: none;
+        }
+
+        /* Darker login button styles */
+        .login-container button[type="submit"] {
+            width: 90%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #1b5e20; /* Darker green */
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease-in-out, transform 0.3s;
+        }
+
+        .login-container button[type="submit"]:hover {
+            background-color: #388e3c; /* Darker hover green */
+            transform: translateY(-3px);
+        }
+
+        /* Darker signup button styles */
+        .login-container button[type="button"] {
+            width: 90%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #0d47a1; /* Darker blue */
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease-in-out, transform 0.3s;
+        }
+
+        .login-container button[type="button"]:hover {
+            background-color: #1565c0; /* Darker hover blue */
+            transform: translateY(-3px);
+        }
+
+        /* Add some spacing for form elements */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        /* Smaller screens */
+        @media (max-width: 768px) {
+            .login-container {
+                width: 90%;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>VG Mobile</h1>
+        <p>Login to your account</p>
+    
+        <!-- Show error message if exists -->
+        <% if (typeof error !== 'undefined') { %>
+            <p style="color: red;"><%= error %></p>
+        <% } %>
+    
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Login</button>
+            <button type="button" onclick="window.location.href='/signup'">Sign Up</button>
+        </form>
+    </div>
+    
+</body>
+</html>
